@@ -1,0 +1,3191 @@
+"SECTION A"
+
+1. What is a data structure? Differentiate between linear and non-linear data structures.
+
+Data Structure:
+A data structure is a method of organizing, storing, and managing data in a computer so that it can be accessed, modified, and processed efficiently. Choosing the right data structure helps improve the performance of programs and makes problem-solving easier.
+
+Linear Data Structure| Non-Linear Data Structure
+Data elements are arranged in a sequential manner.| Data elements are arranged in a hierarchical or network structure.
+Each element is connected to only one previous and one next element (except the first and last).| A single element can be connected to multiple elements.
+Traversal is simple because data is stored in order.| Traversal is more complex due to multiple paths.
+Easier to implement and understand.| More complex but suitable for representing real-world relationships.
+Examples: Array, Stack, Queue, Linked List| Examples: Tree, Graph
+
+---
+
+2. What is an array? Write two advantages and two disadvantages.
+
+Array:
+An array is a linear data structure that stores a collection of elements of the same data type in contiguous memory locations. Each element is identified by an index, starting from 0 in most programming languages.
+
+Advantages:
+
+- Elements can be accessed directly using their index in constant time.
+- It is simple to store and process a large number of similar data items.
+
+Disadvantages:
+
+- The size of an array is fixed and cannot be changed after creation.
+- Inserting or deleting elements from the middle requires shifting other elements, making the operation slower.
+
+---
+
+3. Why is random access in an array O(1)?
+
+Random access in an array takes O(1) time because all elements are stored in contiguous memory locations. The computer calculates the memory address of any element using the base address and its index. Since the address is computed directly, there is no need to search through other elements, making access very fast regardless of the array size.
+
+---
+
+4. What are row-major and column-major order?
+
+Row-Major Order:
+In row-major order, the elements of a two-dimensional array are stored row by row. The complete first row is stored first, followed by the second row, and so on. This storage method is commonly used in C and C++.
+
+Column-Major Order:
+In column-major order, the elements are stored column by column. The complete first column is stored first, followed by the second column. This storage method is commonly used in languages like Fortran and MATLAB.
+
+---
+
+5. What is a stack? Explain the LIFO principle.
+
+A stack is a linear data structure in which all insertion and deletion operations are performed from one end called the top. The two basic operations of a stack are Push (to insert an element) and Pop (to remove an element). Stacks are widely used in programming because they are simple and efficient for managing temporary data.
+
+The stack follows the LIFO (Last In, First Out) principle. This means the element that is inserted last is removed first. A common real-life example is a stack of books, where the book placed on the top is the first one to be removed.
+
+---
+
+6. What are stack overflow and stack underflow?
+
+A stack overflow occurs when an attempt is made to insert a new element into a stack that is already full. Since there is no free space available, the insertion operation fails.
+
+A stack underflow occurs when an attempt is made to remove or access an element from an empty stack. As there are no elements present, the operation cannot be performed.
+
+Both conditions are common errors in stack implementation and should be handled properly in a program.
+
+---
+
+7. What is a queue? Explain the FIFO principle.
+
+A queue is a linear data structure in which insertion of elements takes place from the rear and deletion takes place from the front. The main operations are Enqueue (insert) and Dequeue (remove).
+
+A queue follows the FIFO (First In, First Out) principle. This means the element that enters the queue first is the first one to be removed. A real-life example is a line of people waiting at a ticket counter, where the person who arrives first gets served first.
+
+---
+
+8. Write the four types of queues.
+
+There are four main types of queues:
+
+1. Simple (Linear) Queue – Insertion takes place at the rear and deletion at the front.
+2. Circular Queue – The last position is connected to the first position, allowing better memory utilization.
+3. Priority Queue – Each element is assigned a priority, and higher-priority elements are processed first.
+4. Double-Ended Queue (Deque) – Insertion and deletion can be performed from both the front and the rear.
+
+---
+
+9. What is a priority queue?
+
+A priority queue is a special type of queue in which every element is assigned a priority. Instead of processing elements only according to their arrival time, the element with the highest priority is removed first. If two elements have the same priority, they are usually processed in the order in which they were inserted.
+
+Priority queues are commonly used in CPU scheduling, network routing, and task management systems.
+
+---
+
+10. What is a deque?
+
+A deque (Double-Ended Queue) is a linear data structure in which insertion and deletion operations can be performed from both ends, i.e., the front and the rear. It combines the features of both stacks and queues.
+
+There are two types of deque:
+
+- Input Restricted Deque – Insertion is allowed only at one end, while deletion is allowed from both ends.
+- Output Restricted Deque – Deletion is allowed only from one end, while insertion is allowed at both ends.
+
+---
+
+11. What is a call stack?
+
+A call stack is a stack maintained by the operating system or programming language to keep track of active function calls. Whenever a function is called, its information, such as parameters, local variables, and return address, is pushed onto the stack. When the function finishes execution, its information is removed from the stack.
+
+The call stack helps the program execute functions in the correct order and is especially important in recursive function calls.
+
+---
+
+12. Write three real-life applications of a stack.
+
+Some common real-life applications of a stack are:
+
+1. Undo and Redo operations in text editors like MS Word.
+2. Browser history navigation, where the Back button works using a stack.
+3. Function call management in programming languages through the call stack.
+
+Stacks are also used for expression evaluation and syntax checking in compilers.
+
+---
+
+13. Write three real-life applications of a queue.
+
+Some common real-life applications of a queue are:
+
+1. Waiting lines at banks, railway stations, or ticket counters.
+2. Print queue, where print jobs are processed in the order they are received.
+3. CPU scheduling, where processes waiting for execution are managed using queues.
+
+Queues are also used in network packet transmission and customer service systems.
+
+---
+
+14. What are time complexity and space complexity?
+
+Time Complexity is the measure of the amount of time an algorithm takes to complete its execution as the input size increases. It helps compare the efficiency of different algorithms.
+
+Space Complexity is the amount of memory required by an algorithm while it is running. It includes both the memory needed for input data and any extra memory used during execution.
+
+Both time and space complexity are important for selecting efficient algorithms.
+
+---
+
+15. Explain Big-O, Omega and Theta notations.
+
+Big-O (O) Notation represents the upper bound or worst-case performance of an algorithm. It shows the maximum time an algorithm may take.
+
+Omega (Ω) Notation represents the lower bound or best-case performance. It indicates the minimum time required by an algorithm.
+
+Theta (Θ) Notation represents the tight bound, meaning the algorithm performs within both the upper and lower bounds. It gives the most accurate representation of an algorithm's growth rate.
+
+For example, if an algorithm always takes proportional to n operations, its complexity is Θ(n), while its worst case is O(n) and its best case is Ω(n).
+
+---
+
+"SECTION B" 
+
+1. Algorithm to Insert an Element at a Given Position in an Array
+
+Algorithm
+
+START
+Input array A, size n, element ITEM, and position POS.
+If POS < 1 or POS > n+1
+    Print "Invalid Position"
+    STOP
+End If
+
+For i = n down to POS
+    A[i] = A[i-1]
+End For
+
+A[POS-1] = ITEM
+n = n + 1
+
+Print updated array
+STOP
+
+Example
+
+Original Array:
+
+10 20 30 40 50
+
+Insert 25 at position 3
+
+Shifting:
+
+10 20 30 40 50
+↓
+10 20 30 40 40
+↓
+10 20 30 30 40 50
+↓
+10 20 25 30 40 50
+
+Final Array
+
+10 20 25 30 40 50
+
+Time Complexity: O(n)
+
+---
+
+2. Algorithm to Delete an Element at a Given Position
+
+Algorithm
+
+START
+Input array A, size n and position POS.
+
+If POS < 1 or POS > n
+    Print "Invalid Position"
+    STOP
+End If
+
+For i = POS-1 to n-2
+    A[i] = A[i+1]
+End For
+
+n = n - 1
+
+Print updated array
+STOP
+
+Example
+
+Original Array
+
+10 20 30 40 50
+
+Delete element at position 3
+
+After shifting
+
+10 20 40 50
+
+Time Complexity: O(n)
+
+---
+
+3. Linear Search and Binary Search
+
+(A) Linear Search Algorithm
+
+START
+Input array A, size n and ITEM.
+
+For i = 0 to n-1
+    If A[i] == ITEM
+        Print "Element Found"
+        STOP
+    End If
+End For
+
+Print "Element Not Found"
+STOP
+
+Time Complexity
+
+- Best Case: O(1)
+- Worst Case: O(n)
+
+---
+
+(B) Binary Search Algorithm
+
+Binary Search works only on a sorted array.
+
+START
+Set LOW = 0
+Set HIGH = n-1
+
+While LOW <= HIGH
+    MID = (LOW + HIGH)/2
+
+    If A[MID] == ITEM
+        Print "Element Found"
+        STOP
+
+    Else If ITEM < A[MID]
+        HIGH = MID - 1
+
+    Else
+        LOW = MID + 1
+End While
+
+Print "Element Not Found"
+STOP
+
+Time Complexity
+
+- Best Case: O(1)
+- Worst Case: O(log n)
+
+Comparison
+
+Feature| Linear Search| Binary Search
+Array Required| Sorted or Unsorted| Sorted Only
+Worst Case| O(n)| O(log n)
+Best Case| O(1)| O(1)
+Method| Checks one by one| Divides array into halves
+
+---
+
+4. Reverse an Array In-place
+
+Algorithm
+
+START
+
+Set LEFT = 0
+Set RIGHT = n-1
+
+While LEFT < RIGHT
+    Swap A[LEFT] and A[RIGHT]
+    LEFT = LEFT + 1
+    RIGHT = RIGHT - 1
+End While
+
+Print reversed array
+
+STOP
+
+Example
+
+Before
+
+1 2 3 4 5
+
+After
+
+5 4 3 2 1
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+
+---
+
+5. Rotate an Array by k Positions (Right Rotation)
+
+Algorithm
+
+START
+
+Input array A, size n and k
+
+k = k % n
+
+Reverse the entire array
+
+Reverse first k elements
+
+Reverse remaining (n-k) elements
+
+Print rotated array
+
+STOP
+
+Example
+
+Array
+
+1 2 3 4 5
+
+k = 2
+
+Result
+
+4 5 1 2 3
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+
+---
+
+6. Address Calculation Formula for 2D Array
+
+Suppose
+
+A[3][4]
+Base Address = 1000
+
+Each element = 4 bytes
+
+(A) Row-Major Order
+
+Formula
+
+Address = Base + [(Row × Number of Columns) + Column] × Size
+
+Numerical
+
+Find address of A[2][3]
+
+Base = 1000
+
+Rows = 3
+
+Columns = 4
+
+Size = 4 bytes
+
+Calculation
+
+Address = 1000 + [(2 × 4) + 3] × 4
+
+= 1000 + 11 × 4
+
+= 1044
+
+Answer = 1044
+
+---
+
+(B) Column-Major Order
+
+Formula
+
+Address = Base + [(Column × Number of Rows) + Row] × Size
+
+Numerical
+
+Find address of A[2][3]
+
+Address = 1000 + [(3 × 3) + 2] × 4
+
+= 1000 + 11 × 4
+
+= 1044
+
+Answer = 1044
+
+Time Complexity for Address Calculation: O(1)
+
+---
+
+n = n - 1
+
+Print updated array
+STOP
+
+Example
+
+Original Array
+
+10 20 30 40 50
+
+Delete element at position 3
+
+After shifting
+
+10 20 40 50
+
+Time Complexity: O(n)
+
+---
+
+3. Linear Search and Binary Search
+
+(A) Linear Search Algorithm
+
+START
+Input array A, size n and ITEM.
+
+For i = 0 to n-1
+    If A[i] == ITEM
+        Print "Element Found"
+        STOP
+    End If
+End For
+
+Print "Element Not Found"
+STOP
+
+Time Complexity
+
+- Best Case: O(1)
+- Worst Case: O(n)
+
+---
+
+(B) Binary Search Algorithm
+
+Binary Search works only on a sorted array.
+
+START
+Set LOW = 0
+Set HIGH = n-1
+
+While LOW <= HIGH
+    MID = (LOW + HIGH)/2
+
+    If A[MID] == ITEM
+        Print "Element Found"
+        STOP
+
+    Else If ITEM < A[MID]
+        HIGH = MID - 1
+
+    Else
+        LOW = MID + 1
+End While
+
+Print "Element Not Found"
+STOP
+
+Time Complexity
+
+- Best Case: O(1)
+- Worst Case: O(log n)
+
+Comparison
+
+Feature| Linear Search| Binary Search
+Array Required| Sorted or Unsorted| Sorted Only
+Worst Case| O(n)| O(log n)
+Best Case| O(1)| O(1)
+Method| Checks one by one| Divides array into halves
+
+---
+
+4. Reverse an Array In-place
+
+Algorithm
+
+START
+
+Set LEFT = 0
+Set RIGHT = n-1
+
+While LEFT < RIGHT
+    Swap A[LEFT] and A[RIGHT]
+    LEFT = LEFT + 1
+    RIGHT = RIGHT - 1
+End While
+
+Print reversed array
+
+STOP
+
+Example
+
+Before
+
+1 2 3 4 5
+
+After
+
+5 4 3 2 1
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+
+---
+
+5. Rotate an Array by k Positions (Right Rotation)
+
+Algorithm
+
+START
+
+Input array A, size n and k
+
+k = k % n
+
+Reverse the entire array
+
+Reverse first k elements
+
+Reverse remaining (n-k) elements
+
+Print rotated array
+
+STOP
+
+Example
+
+Array
+
+1 2 3 4 5
+
+k = 2
+
+Result
+
+4 5 1 2 3
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+
+---
+
+6. Address Calculation Formula for 2D Array
+
+Suppose
+
+A[3][4]
+Base Address = 1000
+
+Each element = 4 bytes
+
+(A) Row-Major Order
+
+Formula
+
+Address = Base + [(Row × Number of Columns) + Column] × Size
+
+Numerical
+
+Find address of A[2][3]
+
+Base = 1000
+
+Rows = 3
+
+Columns = 4
+
+Size = 4 bytes
+
+Calculation
+
+Address = 1000 + [(2 × 4) + 3] × 4
+
+= 1000 + 11 × 4
+
+= 1044
+
+Answer = 1044
+
+---
+
+(B) Column-Major Order
+
+Formula
+
+Address = Base + [(Column × Number of Rows) + Row] × Size
+
+Numerical
+
+Find address of A[2][3]
+
+Address = 1000 + [(3 × 3) + 2] × 4
+
+= 1000 + 11 × 4
+
+= 1044
+
+Answer = 1044
+
+Time Complexity for Address Calculation: O(1)
+
+---
+
+7. Stack Implementation Using Array
+
+#include <stdio.h>
+
+#define MAX 5
+
+int stack[MAX];
+int top = -1;
+
+void push(int value) {
+    if (top == MAX - 1) {
+        printf("Stack Overflow\n");
+    } else {
+        top++;
+        stack[top] = value;
+        printf("%d pushed into stack\n", value);
+    }
+}
+
+void pop() {
+    if (top == -1) {
+        printf("Stack Underflow\n");
+    } else {
+        printf("Deleted element: %d\n", stack[top]);
+        top--;
+    }
+}
+
+void peek() {
+    if (top == -1)
+        printf("Stack is Empty\n");
+    else
+        printf("Top element: %d\n", stack[top]);
+}
+
+void isEmpty() {
+    if (top == -1)
+        printf("Stack is Empty\n");
+    else
+        printf("Stack is Not Empty\n");
+}
+
+void isFull() {
+    if (top == MAX - 1)
+        printf("Stack is Full\n");
+    else
+        printf("Stack is Not Full\n");
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+
+    peek();
+
+    pop();
+
+    isEmpty();
+    isFull();
+
+    return 0;
+}
+
+Time Complexity
+
+- Push → O(1)
+- Pop → O(1)
+- Peek → O(1)
+- isEmpty → O(1)
+- isFull → O(1)
+
+---
+
+8. Push and Pop Using Linked List
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+struct Node *top = NULL;
+
+void push(int value) {
+    struct Node *newNode;
+
+    newNode = (struct Node*)malloc(sizeof(struct Node));
+
+    newNode->data = value;
+    newNode->next = top;
+    top = newNode;
+}
+
+void pop() {
+    if (top == NULL) {
+        printf("Stack Underflow\n");
+        return;
+    }
+
+    struct Node *temp = top;
+
+    printf("Deleted Element = %d\n", top->data);
+
+    top = top->next;
+
+    free(temp);
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+
+    pop();
+
+    return 0;
+}
+
+Time Complexity
+
+- Push → O(1)
+- Pop → O(1)
+
+---
+
+9. Reverse a String Using a Stack
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char str[100], stack[100];
+    int top = -1;
+
+    printf("Enter String: ");
+    gets(str);
+
+    for(int i=0; str[i]!='\0'; i++)
+        stack[++top]=str[i];
+
+    printf("Reversed String: ");
+
+    while(top!=-1)
+        printf("%c",stack[top--]);
+
+    return 0;
+}
+
+Output
+
+Enter String: HELLO
+Reversed String: OLLEH
+
+Time Complexity: O(n)
+
+---
+
+10. Next Greater Element Using Stack
+
+#include<stdio.h>
+
+int main(){
+
+    int a[]={4,5,2,25};
+    int n=4;
+
+    for(int i=0;i<n;i++){
+
+        int j;
+
+        for(j=i+1;j<n;j++){
+
+            if(a[j]>a[i]){
+                printf("%d -> %d\n",a[i],a[j]);
+                break;
+            }
+
+        }
+
+        if(j==n)
+            printf("%d -> -1\n",a[i]);
+
+    }
+
+    return 0;
+}
+
+Output
+
+4 -> 5
+5 -> 25
+2 -> 25
+25 -> -1
+
+Time Complexity
+
+- Using Nested Loops → O(n²)
+- Using Stack (Optimized) → O(n)
+
+---
+
+11. Min Stack (getMin() in O(1))
+
+Idea
+
+Maintain two stacks:
+
+- Main Stack → Stores all elements.
+- Min Stack → Stores only the minimum element at each stage.
+
+Whenever a new element is pushed:
+
+- Push it into the main stack.
+- If it is smaller than or equal to the current minimum, also push it into the min stack.
+
+Whenever an element is popped:
+
+- If it is equal to the top of the min stack, remove it from both stacks.
+
+The minimum element is always available at the top of the min stack.
+
+Push: 5
+Min = 5
+
+Push: 3
+Min = 3
+
+Push: 7
+Min = 3
+
+Pop()
+Min = 3
+
+Pop()
+Min = 5
+
+Complexities
+
+- Push → O(1)
+- Pop → O(1)
+- getMin() → O(1)
+
+---
+
+12. Queue Implementation Using Array (Enqueue & Dequeue)
+
+#include<stdio.h>
+
+#define MAX 5
+
+int queue[MAX];
+int front=-1,rear=-1;
+
+void enqueue(int value){
+
+    if(rear==MAX-1){
+        printf("Queue Overflow\n");
+        return;
+    }
+
+    if(front==-1)
+        front=0;
+
+    rear++;
+    queue[rear]=value;
+}
+
+void dequeue(){
+
+    if(front==-1 || front>rear){
+        printf("Queue Underflow\n");
+        return;
+    }
+
+    printf("Deleted Element = %d\n",queue[front]);
+    front++;
+}
+
+void display(){
+
+    if(front==-1 || front>rear){
+        printf("Queue is Empty\n");
+        return;
+    }
+
+    for(int i=front;i<=rear;i++)
+        printf("%d ",queue[i]);
+
+    printf("\n");
+}
+
+int main(){
+
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+
+    display();
+
+    dequeue();
+
+    display();
+
+    return 0;
+}
+
+Output
+
+10 20 30
+Deleted Element = 10
+20 30
+
+Time Complexity
+
+- Enqueue → O(1)
+- Dequeue → O(1)
+- Display → O(n) 
+
+---
+
+13. Queue Implementation Using Linked List
+
+C Program
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+struct Node *front = NULL;
+struct Node *rear = NULL;
+
+// Enqueue
+void enqueue(int value) {
+    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = NULL;
+
+    if (rear == NULL) {
+        front = rear = newNode;
+    } else {
+        rear->next = newNode;
+        rear = newNode;
+    }
+}
+
+// Dequeue
+void dequeue() {
+    if (front == NULL) {
+        printf("Queue Underflow\n");
+        return;
+    }
+
+    struct Node *temp = front;
+    printf("Deleted Element = %d\n", front->data);
+
+    front = front->next;
+
+    if (front == NULL)
+        rear = NULL;
+
+    free(temp);
+}
+
+// Display
+void display() {
+    struct Node *temp = front;
+
+    if (temp == NULL) {
+        printf("Queue is Empty\n");
+        return;
+    }
+
+    while (temp != NULL) {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+
+    printf("\n");
+}
+
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+
+    display();
+
+    dequeue();
+
+    display();
+
+    return 0;
+}
+
+Time Complexity
+
+- Enqueue → O(1)
+- Dequeue → O(1)
+- Display → O(n)
+
+---
+
+14. Deque Operations (Insert/Delete from Both Ends)
+
+C Program
+
+#include <stdio.h>
+
+#define MAX 5
+
+int deque[MAX];
+int front = -1, rear = -1;
+
+void insertFront(int value) {
+
+    if ((front == 0 && rear == MAX - 1) || (front == rear + 1)) {
+        printf("Deque Overflow\n");
+        return;
+    }
+
+    if (front == -1)
+        front = rear = 0;
+    else if (front == 0)
+        front = MAX - 1;
+    else
+        front--;
+
+    deque[front] = value;
+}
+
+void insertRear(int value) {
+
+    if ((front == 0 && rear == MAX - 1) || (front == rear + 1)) {
+        printf("Deque Overflow\n");
+        return;
+    }
+
+    if (rear == -1)
+        front = rear = 0;
+    else if (rear == MAX - 1)
+        rear = 0;
+    else
+        rear++;
+
+    deque[rear] = value;
+}
+
+void deleteFront() {
+
+    if (front == -1) {
+        printf("Deque Underflow\n");
+        return;
+    }
+
+    printf("Deleted = %d\n", deque[front]);
+
+    if (front == rear)
+        front = rear = -1;
+    else if (front == MAX - 1)
+        front = 0;
+    else
+        front++;
+}
+
+void deleteRear() {
+
+    if (rear == -1) {
+        printf("Deque Underflow\n");
+        return;
+    }
+
+    printf("Deleted = %d\n", deque[rear]);
+
+    if (front == rear)
+        front = rear = -1;
+    else if (rear == 0)
+        rear = MAX - 1;
+    else
+        rear--;
+}
+
+int main() {
+
+    insertRear(10);
+    insertRear(20);
+    insertFront(5);
+
+    deleteFront();
+    deleteRear();
+
+    return 0;
+}
+
+Time Complexity
+
+- Insert Front → O(1)
+- Insert Rear → O(1)
+- Delete Front → O(1)
+- Delete Rear → O(1)
+
+---
+
+15. Reverse a Queue Using a Stack
+
+Algorithm
+
+1. Create an empty stack.
+2. Remove each element from the queue and push it onto the stack.
+3. Pop all elements from the stack and insert them back into the queue.
+4. The queue is now reversed.
+
+C Program
+
+#include <stdio.h>
+
+int main() {
+
+    int queue[] = {10, 20, 30, 40};
+    int stack[10];
+    int top = -1;
+    int n = 4;
+
+    // Push queue elements into stack
+    for (int i = 0; i < n; i++)
+        stack[++top] = queue[i];
+
+    // Pop back into queue
+    for (int i = 0; i < n; i++)
+        queue[i] = stack[top--];
+
+    printf("Reversed Queue: ");
+
+    for (int i = 0; i < n; i++)
+        printf("%d ", queue[i]);
+
+    return 0;
+}
+
+Output
+
+Reversed Queue: 40 30 20 10
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+
+---
+
+16. Generate Binary Numbers from 1 to n Using a Queue
+
+Algorithm
+
+1. Create an empty queue.
+2. Insert ""1"" into the queue.
+3. Repeat "n" times:
+   - Remove the front element and print it.
+   - Insert the removed element + ""0"" into the queue.
+   - Insert the removed element + ""1"" into the queue.
+
+C Program
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char queue[100][20];
+    int front = 0, rear = 0;
+    int n = 10;
+
+    strcpy(queue[rear++], "1");
+
+    for (int i = 1; i <= n; i++) {
+
+        char current[20];
+        strcpy(current, queue[front++]);
+
+        printf("%s ", current);
+
+        strcpy(queue[rear], current);
+        strcat(queue[rear++], "0");
+
+        strcpy(queue[rear], current);
+        strcat(queue[rear++], "1");
+    }
+
+    return 0;
+}
+
+Output (n = 10)
+
+1
+10
+11
+100
+101
+110
+111
+1000
+1001
+1010
+
+Time Complexity: O(n)
+
+Space Complexity: O(n) 
+
+---
+
+"SECTION C"
+
+1. Infix to Postfix Conversion
+
+Expression
+
+A + B * (C - D) / E
+
+Algorithm
+
+START
+
+Create an empty stack.
+
+Scan the infix expression from left to right.
+
+If the symbol is an operand,
+    Add it to the postfix expression.
+
+Else if the symbol is '(',
+    Push it onto the stack.
+
+Else if the symbol is ')',
+    Pop and append operators until '(' is found.
+    Remove '('.
+
+Else if the symbol is an operator,
+    While the stack is not empty and the top operator has
+    higher or equal precedence,
+        Pop and append it.
+    Push the current operator.
+
+After scanning the expression,
+Pop all remaining operators.
+
+STOP
+
+Stack Table
+
+Symbol| Stack| Postfix
+A| -| A
++| +| A
+B| +| AB
+*| + *| AB
+(| + * (| AB
+C| + * (| ABC
+-| + * ( -| ABC
+D| + * ( -| ABCD
+)| + *| ABCD-
+/| + /| ABCD-*
+E| + /| ABCD-*E
+End| -| *ABCD-E/+
+
+Final Answer
+
+ABCD-*E/+
+
+Time Complexity: O(n)
+
+---
+
+2. Postfix Evaluation
+
+Expression
+
+5 3 2 * + 4 -
+
+Algorithm
+
+START
+
+Create an empty stack.
+
+Read expression from left to right.
+
+If operand
+    Push it.
+
+If operator
+    Pop two operands.
+    Perform operation.
+    Push result.
+
+After complete scan,
+Top of stack is the answer.
+
+STOP
+
+Stack Dry Run
+
+Symbol| Stack
+5| 5
+3| 5 3
+2| 5 3 2
+*| 5 6
++| 11
+4| 11 4
+-| 7
+
+Result
+
+Answer = 7
+
+Time Complexity: O(n)
+
+---
+
+3. Circular Queue
+
+A Circular Queue is a queue in which the last position is connected to the first position. This allows reuse of empty spaces created after deletions and avoids memory wastage.
+
+---
+
+Full C Program
+
+#include<stdio.h>
+
+#define MAX 5
+
+int queue[MAX];
+int front=-1,rear=-1;
+
+void enqueue(int value){
+
+    if((rear+1)%MAX==front){
+        printf("Queue Overflow\n");
+        return;
+    }
+
+    if(front==-1)
+        front=rear=0;
+    else
+        rear=(rear+1)%MAX;
+
+    queue[rear]=value;
+}
+
+void dequeue(){
+
+    if(front==-1){
+        printf("Queue Underflow\n");
+        return;
+    }
+
+    printf("Deleted = %d\n",queue[front]);
+
+    if(front==rear)
+        front=rear=-1;
+    else
+        front=(front+1)%MAX;
+}
+
+void display(){
+
+    if(front==-1){
+        printf("Queue Empty\n");
+        return;
+    }
+
+    int i=front;
+
+    while(i!=rear){
+        printf("%d ",queue[i]);
+        i=(i+1)%MAX;
+    }
+
+    printf("%d\n",queue[rear]);
+}
+
+int main(){
+
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    enqueue(40);
+
+    display();
+
+    dequeue();
+
+    display();
+
+    enqueue(50);
+
+    display();
+
+    return 0;
+}
+
+---
+
+Front and Rear Modulo Logic
+
+Instead of increasing normally,
+
+rear = (rear + 1) % MAX
+
+and
+
+front = (front + 1) % MAX
+
+This makes the indices wrap around to the beginning of the array when they reach the last position.
+
+Example (MAX = 5):
+
+Index:
+0 → 1 → 2 → 3 → 4
+↑                 ↓
+└─────────────────┘
+
+---
+
+Full Condition
+
+(rear + 1) % MAX == front
+
+This means the next insertion would overwrite the front element.
+
+---
+
+Empty Condition
+
+front == -1
+
+or after deleting the last element,
+
+front = rear = -1
+
+---
+
+Complexity
+
+Operation| Time Complexity
+Enqueue| O(1)
+Dequeue| O(1)
+Display| O(n)
+
+---
+
+4. Implement a Queue Using Two Stacks
+
+Idea
+
+A queue follows FIFO (First In, First Out), while a stack follows LIFO (Last In, First Out). By using two stacks, we can simulate queue operations.
+
+- Stack 1 (S1): Used for enqueue.
+- Stack 2 (S2): Used for dequeue.
+
+Algorithm
+
+Enqueue(x)
+
+Push x into Stack S1.
+
+Dequeue()
+
+If S2 is empty:
+    While S1 is not empty:
+        Pop from S1 and push into S2.
+Pop and return the top element of S2.
+
+Example
+
+Enqueue: 10, 20, 30
+
+S1 = 10 20 30
+S2 = Empty
+
+Dequeue
+
+Move all elements:
+S1 → Empty
+S2 → 30 20 10
+
+Remove top of S2
+
+Output = 10
+
+Complexity
+
+Operation| Time Complexity
+Enqueue| O(1)
+Dequeue| O(1) (Amortized), O(n) (Worst Case)
+
+---
+
+5. Implement a Stack Using Two Queues
+
+Idea
+
+A stack follows LIFO, while a queue follows FIFO.
+
+Use two queues:
+
+- Q1 – Main queue
+- Q2 – Temporary queue
+
+Push(x)
+
+Insert x into Q2.
+
+Move all elements from Q1 to Q2.
+
+Swap Q1 and Q2.
+
+Pop()
+
+Remove the front element from Q1.
+
+Example
+
+Push 10
+
+Q1 = 10
+
+Push 20
+
+Q2 = 20
+Move 10
+
+Q1 = 20 10
+
+Push 30
+
+Q1 = 30 20 10
+
+Pop()
+
+Output = 30
+
+Complexity
+
+Operation| Time Complexity
+Push| O(n)
+Pop| O(1)
+
+---
+
+6. Balanced Parentheses Algorithm
+
+Algorithm
+
+START
+
+Create an empty stack.
+
+Read expression from left to right.
+
+If opening bracket (, { or [
+    Push it.
+
+If closing bracket ), } or ]
+    If stack is empty
+        Not Balanced
+
+    Pop top element.
+
+    If brackets do not match
+        Not Balanced
+
+After scanning,
+
+If stack is empty
+    Balanced
+
+Else
+    Not Balanced
+
+STOP
+
+---
+
+Dry Run 1
+
+Expression
+
+{[()]}
+
+Symbol| Stack
+{| {
+[| { [
+(| { [ (
+)| { [
+]| {
+}| Empty
+
+Result: ✅ Balanced
+
+---
+
+Dry Run 2
+
+Expression
+
+{[(])}
+
+Symbol| Stack
+{| {
+[| { [
+(| { [ (
+]| ❌ Mismatch
+
+Result: ❌ Not Balanced
+
+Time Complexity: O(n)
+
+---
+
+7. Applications of Stack
+
+(a) Recursion
+
+Whenever a function calls itself, each function call is stored in the call stack. After execution, the functions return in reverse order.
+
+Example: Factorial using recursion.
+
+---
+
+(b) Undo/Redo
+
+Applications such as MS Word, Photoshop, and code editors use a stack to store previous actions.
+
+- Undo → Pop the latest action.
+- Redo → Restore the popped action.
+
+---
+
+(c) Expression Evaluation
+
+Stacks are used to:
+
+- Convert Infix to Postfix
+- Convert Infix to Prefix
+- Evaluate Postfix Expressions
+- Evaluate Prefix Expressions
+
+Compilers and calculators commonly use this technique.
+
+---
+
+(d) Backtracking
+
+Backtracking algorithms use stacks to remember previous states. If one path fails, the algorithm returns to the previous state and tries another path.
+
+Applications:
+
+- Maze solving
+- Sudoku solver
+- Depth First Search (DFS)
+- Web browser Back button
+
+---
+
+Summary of Applications
+
+Application| Purpose
+Recursion| Stores function calls
+Undo/Redo| Restores previous actions
+Expression Evaluation| Converts and evaluates expressions
+Backtracking| Returns to previous state during problem solving
+
+---
+
+8. Complexity Comparison of Array, Stack and Queue
+
+Complexity Table
+
+Operation| Array| Stack| Queue
+Access| O(1)| O(n)| O(n)
+Search| O(n)| O(n)| O(n)
+Insert| O(n)| O(1)| O(1) (Enqueue)
+Delete| O(n)| O(1)| O(1) (Dequeue)
+Peek/Top/Front| O(1)| O(1)| O(1)
+
+When to Use Which?
+
+Array
+
+- When fast random access is required.
+- Suitable for fixed-size collections.
+- Examples: Student marks, monthly sales records.
+
+Stack
+
+- When the last inserted element should be processed first (LIFO).
+- Examples: Function calls, Undo/Redo, Browser Back button.
+
+Queue
+
+- When elements should be processed in the order they arrive (FIFO).
+- Examples: Printer queue, CPU scheduling, Ticket reservation systems.
+
+---
+
+9. Priority Queue: Array vs Heap Implementation
+
+A Priority Queue is a special type of queue in which each element has a priority. The element with the highest (or lowest) priority is removed before other elements.
+
+(A) Array Implementation
+
+Insertion
+
+Insert the new element at the end of the array.
+
+Time Complexity: O(1)
+
+Deletion
+
+Search for the highest-priority element, remove it, and shift the remaining elements.
+
+Time Complexity: O(n)
+
+---
+
+(B) Heap Implementation
+
+A Binary Heap is a complete binary tree that satisfies the heap property.
+
+Insertion
+
+Insert the new element at the last position and move it upward (heapify up).
+
+Time Complexity: O(log n)
+
+Deletion
+
+Remove the root element, replace it with the last element, and restore the heap (heapify down).
+
+Time Complexity: O(log n)
+
+---
+
+Comparison Table
+
+Operation| Array| Heap
+Insertion| O(1)| O(log n)
+Deletion| O(n)| O(log n)
+Find Highest Priority| O(n)| O(1)
+
+Conclusion
+
+- Array implementation is simple and suitable for small datasets.
+- Heap implementation is more efficient for frequent insertion and deletion operations, making it the preferred choice in real-world applications such as CPU scheduling and graph algorithms.
+
+---
+
+10. Sliding Window Maximum Using a Deque
+
+Problem
+
+Given an array and a window of size k, find the maximum element in every window.
+
+Example
+
+Array = {1, 3, -1, -3, 5, 3, 6, 7}
+k = 3
+
+Output
+
+3 3 5 5 6 7
+
+---
+
+Algorithm
+
+START
+
+Create an empty deque.
+
+For each element in the array:
+
+1. Remove indices that are outside the current window.
+2. Remove elements smaller than the current element from the rear.
+3. Insert the current index into the deque.
+4. If the first window is complete,
+   print the element at the front of the deque.
+
+STOP
+
+---
+
+Dry Run
+
+Window| Maximum
+1 3 -1| 3
+3 -1 -3| 3
+-1 -3 5| 5
+-3 5 3| 5
+5 3 6| 6
+3 6 7| 7
+
+---
+
+C Program
+
+#include <stdio.h>
+
+void slidingWindowMaximum(int arr[], int n, int k)
+{
+    for (int i = 0; i <= n - k; i++)
+    {
+        int max = arr[i];
+
+        for (int j = i + 1; j < i + k; j++)
+        {
+            if (arr[j] > max)
+                max = arr[j];
+        }
+
+        printf("%d ", max);
+    }
+}
+
+int main()
+{
+    int arr[] = {1,3,-1,-3,5,3,6,7};
+    int n = 8;
+    int k = 3;
+
+    slidingWindowMaximum(arr, n, k);
+
+    return 0;
+}
+
+Output
+
+3 3 5 5 6 7
+
+«Note: The above program is the simple approach with O(n × k) complexity. The optimized solution uses a deque and runs in O(n) time.»
+
+---
+
+Complexity
+
+Method| Time Complexity| Space Complexity
+Brute Force| O(n × k)| O(1)
+Using Deque| O(n)| O(k)
+
+Why Deque?
+
+A deque allows insertion and deletion from both ends in O(1) time. It stores useful indices in decreasing order of their values, ensuring that the front of the deque always contains the maximum element of the current window. This makes the overall algorithm run in linear time, O(n).
+
+---
+
+"SECTION D"
+
+1. Insert an Element into a Sorted Array (5 Marks)
+
+Algorithm
+
+START
+
+Input sorted array A, size n and element ITEM.
+
+Set i = n - 1
+
+While i >= 0 and A[i] > ITEM
+    A[i+1] = A[i]
+    i = i - 1
+
+A[i+1] = ITEM
+n = n + 1
+
+Print updated array
+
+STOP
+
+Example
+
+Before:
+
+10 20 30 50 60
+
+Insert 40
+
+Shifting:
+
+10 20 30 50 60
+↓
+10 20 30 50 50
+↓
+10 20 30 40 50 60
+
+Output
+
+10 20 30 40 50 60
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+---
+
+2. Remove Duplicates from a Sorted Array In-place (5 Marks)
+
+Algorithm
+
+START
+
+If n = 0
+    STOP
+
+Set j = 0
+
+For i = 1 to n-1
+
+    If A[i] != A[j]
+
+        j = j + 1
+        A[j] = A[i]
+
+Print first (j+1) elements
+
+STOP
+
+Example
+
+Input
+
+1 1 2 2 3 4 4 5
+
+Output
+
+1 2 3 4 5
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+---
+
+3. Delete All Occurrences of a Given Value (5 Marks)
+
+Algorithm
+
+START
+
+Input array and value X
+
+Set j = 0
+
+For i = 0 to n-1
+
+    If A[i] != X
+
+        A[j] = A[i]
+        j++
+
+Print first j elements
+
+STOP
+
+Example
+
+Input
+
+Array = 2 3 2 5 2 7
+
+X = 2
+
+Output
+
+3 5 7
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+---
+
+4. Merge Two Sorted Arrays into One Sorted Array (5 Marks)
+
+Algorithm
+
+START
+
+Input arrays A and B
+
+Set i = 0
+Set j = 0
+Set k = 0
+
+While i < n and j < m
+
+    If A[i] <= B[j]
+
+        C[k] = A[i]
+        i++
+
+    Else
+
+        C[k] = B[j]
+        j++
+
+    k++
+
+Copy remaining elements of A
+
+Copy remaining elements of B
+
+Print merged array
+
+STOP
+
+Example
+
+Array A
+
+1 3 5 7
+
+Array B
+
+2 4 6 8
+
+Merged Array
+
+1 2 3 4 5 6 7 8
+
+Time Complexity: O(n + m)
+
+Space Complexity: O(n + m)
+
+---
+
+5. Move All Zeroes to the End of an Array (5 Marks)
+
+Algorithm
+
+START
+
+Input array A of size n
+Set j = 0
+
+For i = 0 to n-1
+    If A[i] ≠ 0
+        Swap A[i] and A[j]
+        j = j + 1
+
+Print updated array
+
+STOP
+
+Example
+
+Input
+
+0 1 0 3 12
+
+Output
+
+1 3 12 0 0
+
+The relative order of non-zero elements remains the same.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+---
+
+6. Find the Largest and Second Largest Elements in a Single Traversal (5 Marks)
+
+Algorithm
+
+START
+
+Set largest = -∞
+Set secondLargest = -∞
+
+For each element in the array
+
+    If element > largest
+        secondLargest = largest
+        largest = element
+
+    Else If element > secondLargest
+         and element ≠ largest
+        secondLargest = element
+
+Print largest and secondLargest
+
+STOP
+
+Example
+
+Input
+
+10 45 22 67 50
+
+Output
+
+Largest = 67
+
+Second Largest = 50
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+---
+
+7. Two Sum Problem (10 Marks)
+
+Problem
+
+Given an array and a target value, find two elements whose sum is equal to the target.
+
+Example
+
+Array = {2, 7, 11, 15}
+
+Target = 9
+
+Output
+
+2 + 7 = 9
+
+---
+
+Method 1: Brute Force
+
+Algorithm
+
+START
+
+For i = 0 to n-2
+
+    For j = i+1 to n-1
+
+        If A[i] + A[j] == Target
+
+            Print pair
+
+STOP
+
+Complexity
+
+- Time Complexity: O(n²)
+- Space Complexity: O(1)
+
+---
+
+Method 2: Hashing
+
+Algorithm
+
+START
+
+Create an empty Hash Table.
+
+For each element x in the array
+
+    Find Target − x
+
+    If present in Hash Table
+
+        Print the pair
+
+    Else
+
+        Insert x into Hash Table
+
+STOP
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+
+---
+
+Comparison Table
+
+Method| Time| Space
+Brute Force| O(n²)| O(1)
+Hashing| O(n)| O(n)
+
+Conclusion:
+The hashing method is much faster for large arrays because it avoids checking every possible pair.
+
+---
+
+8. Maximum Subarray Sum Using Kadane's Algorithm (10 Marks)
+
+Kadane's Algorithm
+
+Kadane's Algorithm finds the maximum sum of any contiguous subarray in a single traversal of the array.
+
+Algorithm
+
+START
+
+Set currentSum = 0
+Set maxSum = A[0]
+
+For each element
+
+    currentSum = currentSum + element
+
+    If currentSum > maxSum
+        maxSum = currentSum
+
+    If currentSum < 0
+        currentSum = 0
+
+Print maxSum
+
+STOP
+
+Example
+
+Input
+
+-2 1 -3 4 -1 2 1 -5 4
+
+Dry Run
+
+Element| Current Sum| Maximum Sum
+-2| -2 → 0| -2
+1| 1| 1
+-3| -2 → 0| 1
+4| 4| 4
+-1| 3| 4
+2| 5| 5
+1| 6| 6
+-5| 1| 6
+4| 5| 6
+
+Result
+
+Maximum Subarray Sum = 6
+
+Subarray = {4, -1, 2, 1}
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+
+Advantages of Kadane's Algorithm
+
+- Requires only one traversal of the array.
+- Uses constant extra memory.
+- Much faster than the brute-force approach (O(n²) or O(n³)).
+
+---
+
+9. Convert a Decimal Number to Binary Using a Stack (5 Marks)
+
+Algorithm
+
+START
+
+Input decimal number N
+
+Create an empty stack
+
+While N > 0
+    Push N % 2 into stack
+    N = N / 2
+
+While stack is not empty
+    Pop and print element
+
+STOP
+
+Example
+
+Decimal = 13
+
+Operation| Stack
+13 % 2 = 1| 1
+6 % 2 = 0| 1 0
+3 % 2 = 1| 1 0 1
+1 % 2 = 1| 1 0 1 1
+
+Pop all elements
+
+Output
+
+1101
+
+Time Complexity: O(log n)
+
+Space Complexity: O(log n)
+
+---
+
+10. Check Whether a String is a Palindrome Using a Stack (5 Marks)
+
+Algorithm
+
+START
+
+Input string
+
+Push every character into stack
+
+Again scan the string
+
+Pop one character
+
+Compare with current character
+
+If mismatch
+    Not Palindrome
+
+Otherwise continue
+
+If complete scan succeeds
+
+Palindrome
+
+STOP
+
+Example
+
+Input
+
+MADAM
+
+Stack
+
+M A D A M
+
+After popping
+
+M A D A M
+
+Output
+
+Palindrome
+
+Input
+
+HELLO
+
+Output
+
+Not Palindrome
+
+Time Complexity: O(n)
+
+---
+
+11. Delete the Middle Element of a Stack (5 Marks)
+
+Algorithm
+
+START
+
+Find middle position
+
+Pop elements until middle is reached
+
+Delete middle element
+
+Push remaining elements back
+
+STOP
+
+Example
+
+Original Stack
+
+Top
+50
+40
+30
+20
+10
+
+Middle Element
+
+30
+
+After Deletion
+
+Top
+50
+40
+20
+10
+
+Time Complexity: O(n)
+
+Space Complexity: O(n)
+
+---
+
+12. Insert an Element at the Bottom of a Stack Using Recursion (5 Marks)
+
+Algorithm
+
+START
+
+If stack is empty
+
+    Push new element
+
+Else
+
+    Pop top element
+
+    Recursively insert at bottom
+
+    Push popped element back
+
+STOP
+
+Example
+
+Original Stack
+
+Top
+30
+20
+10
+
+Insert 5 at Bottom
+
+After Operation
+
+Top
+30
+20
+10
+5
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(n) (Recursive call stack)
+
+---
+
+13. Sort a Stack Using a Temporary Stack (5 Marks)
+
+Algorithm
+
+START
+
+Create an empty temporary stack.
+
+While original stack is not empty
+
+    Pop one element into TEMP.
+
+    While temporary stack is not empty
+    and top element > TEMP
+
+        Move top element back to original stack.
+
+    Push TEMP into temporary stack.
+
+Print temporary stack (sorted).
+
+STOP
+
+Example
+
+Original Stack
+
+Top
+3
+1
+4
+2
+
+Sorted Stack
+
+Top
+4
+3
+2
+1
+
+Complexity
+
+- Time Complexity: O(n²)
+- Space Complexity: O(n)
+
+---
+
+14. Implement Two Stacks in a Single Array (10 Marks)
+
+Idea
+
+Use one array for both stacks.
+
+- Stack 1 grows from left to right.
+- Stack 2 grows from right to left.
+
+This improves memory utilization because both stacks share the same array.
+
+C Program
+
+#include <stdio.h>
+
+#define MAX 10
+
+int arr[MAX];
+int top1 = -1;
+int top2 = MAX;
+
+void push1(int x) {
+    if (top1 + 1 == top2) {
+        printf("Overflow\n");
+        return;
+    }
+    arr[++top1] = x;
+}
+
+void push2(int x) {
+    if (top1 + 1 == top2) {
+        printf("Overflow\n");
+        return;
+    }
+    arr[--top2] = x;
+}
+
+void pop1() {
+    if (top1 == -1)
+        printf("Stack 1 Underflow\n");
+    else
+        printf("Deleted = %d\n", arr[top1--]);
+}
+
+void pop2() {
+    if (top2 == MAX)
+        printf("Stack 2 Underflow\n");
+    else
+        printf("Deleted = %d\n", arr[top2++]);
+}
+
+int main() {
+    push1(10);
+    push1(20);
+
+    push2(100);
+    push2(200);
+
+    pop1();
+    pop2();
+
+    return 0;
+}
+
+Complexity
+
+Operation| Time
+Push| O(1)
+Pop| O(1)
+
+---
+
+15. Convert Infix to Prefix (10 Marks)
+
+Expression
+
+(A + B) * C - D
+
+Algorithm
+
+START
+
+Reverse the infix expression.
+
+Replace '(' with ')' and vice versa.
+
+Convert the reversed expression into postfix.
+
+Reverse the postfix expression.
+
+The result is the prefix expression.
+
+STOP
+
+Step-by-Step
+
+Step| Expression
+Original| (A+B)*C-D
+Reverse| D-C*(B+A)
+Replace Brackets| D-C*(B+A)
+Postfix| DCBA+*-
+Reverse| -*+ABCD
+
+Final Prefix
+
+-*+ABCD
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+
+---
+
+16. Evaluate a Prefix Expression Using a Stack (10 Marks)
+
+Expression
+
+- * + 4 3 2 5
+
+Algorithm
+
+START
+
+Scan the prefix expression from right to left.
+
+If operand
+    Push into stack.
+
+If operator
+    Pop two operands.
+    Perform operation.
+    Push result.
+
+After complete scan,
+Top of stack is the answer.
+
+STOP
+
+Dry Run
+
+Symbol| Stack
+5| 5
+2| 5 2
+3| 5 2 3
+4| 5 2 3 4
++| 5 2 7
+*| 5 14
+-| 9
+
+Calculation
+
+4 + 3 = 7
+
+7 × 2 = 14
+
+14 - 5 = 9
+
+Final Answer
+
+9
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+
+---
+
+17. Stock Span Problem Using a Stack (10 Marks)
+
+Problem
+
+The stock span of a day is the number of consecutive days (including today) for which the stock price is less than or equal to today's price.
+
+Example
+
+Price = 100 80 60 70 60 75 85
+
+Output
+
+Span = 1 1 1 2 1 4 6
+
+Algorithm
+
+START
+
+Create an empty stack.
+
+Push index 0.
+
+Span[0] = 1
+
+For each day i
+
+    While stack is not empty and
+    Price[top] <= Price[i]
+
+        Pop
+
+    If stack is empty
+
+        Span[i] = i + 1
+
+    Else
+
+        Span[i] = i - top
+
+    Push current index
+
+STOP
+
+Dry Run
+
+Price| Span
+100| 1
+80| 1
+60| 1
+70| 2
+60| 1
+75| 4
+85| 6
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+
+---
+
+18. Reverse the First k Elements of a Queue (5 Marks)
+
+Algorithm
+
+START
+
+Input queue Q and value k.
+
+Push first k elements into a stack.
+
+Pop all stack elements and insert back into queue.
+
+Move remaining (n-k) elements to the rear.
+
+Print updated queue.
+
+STOP
+
+Example
+
+Queue
+
+10 20 30 40 50
+
+k = 3
+
+Output
+
+30 20 10 40 50
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(k)
+
+---
+
+19. Interleave the First Half of a Queue with the Second Half (5 Marks)
+
+Algorithm
+
+START
+
+Divide the queue into two halves.
+
+Store the first half in another queue.
+
+Remove one element from the first half.
+
+Remove one element from the second half.
+
+Insert both alternately.
+
+Repeat until queue becomes interleaved.
+
+STOP
+
+Example
+
+Input
+
+10 20 30 40
+
+Output
+
+10 30 20 40
+
+Another Example
+
+Input
+
+1 2 3 4 5 6
+
+Output
+
+1 4 2 5 3 6
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+
+---
+
+20. Implement a Deque Using a Circular Array (5 Marks)
+
+Operations
+
+- Insert Front
+- Insert Rear
+- Delete Front
+- Delete Rear
+
+Algorithm
+
+Insert Front
+
+If deque is full
+
+    Overflow
+
+Else
+
+    Move front backward circularly
+
+    Insert element
+
+Insert Rear
+
+If deque is full
+
+    Overflow
+
+Else
+
+    Move rear forward circularly
+
+    Insert element
+
+Delete Front
+
+If deque is empty
+
+    Underflow
+
+Else
+
+    Remove front element
+
+    Move front forward
+
+Delete Rear
+
+If deque is empty
+
+    Underflow
+
+Else
+
+    Remove rear element
+
+    Move rear backward
+
+Circular Conditions
+
+Full Condition
+
+(front == 0 && rear == MAX-1)
+OR
+(front == rear + 1)
+
+Empty Condition
+
+front == -1
+
+Complexity
+
+Operation| Time
+Insert Front| O(1)
+Insert Rear| O(1)
+Delete Front| O(1)
+Delete Rear| O(1)
+
+---
+
+21. Simulate Round Robin CPU Scheduling Using a Queue (10 Marks)
+
+Definition
+
+Round Robin (RR) is a CPU scheduling algorithm in which each process gets a fixed amount of CPU time called the time quantum. If a process is not completed within the given time, it is moved to the rear of the queue and the next process is executed.
+
+---
+
+Algorithm
+
+START
+
+Insert all processes into a queue.
+
+While queue is not empty
+
+    Remove the front process.
+
+    Execute it for Time Quantum.
+
+    If process is completed
+        Remove it permanently.
+
+    Else
+        Insert it again at the rear of the queue.
+
+STOP
+
+---
+
+Example
+
+Process| Burst Time
+P1| 5
+P2| 3
+P3| 4
+
+Time Quantum = 2
+
+Execution Order:
+
+P1 → P2 → P3 → P1 → P2 → P3 → P1
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+
+---
+
+22. First Non-Repeating Character in a Stream (10 Marks)
+
+Algorithm
+
+START
+
+Create a queue.
+
+Create a frequency array.
+
+For every incoming character
+
+    Increase its frequency.
+
+    Insert it into the queue.
+
+    While queue is not empty and
+    frequency(front) > 1
+
+        Remove front element.
+
+    If queue becomes empty
+
+        Print -1
+
+    Else
+
+        Print front character.
+
+STOP
+
+---
+
+Example
+
+Input Stream
+
+a a b c b
+
+Output
+
+a
+-1
+b
+b
+c
+
+Complexity
+
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+
+---
+
+23. Josephus Problem Using a Queue (10 Marks)
+
+Problem
+
+There are n people standing in a circle. Starting from the first person, every k-th person is eliminated until only one person remains.
+
+---
+
+Algorithm
+
+START
+
+Insert all persons into a queue.
+
+While more than one person remains
+
+    Move first (k−1) persons to the rear.
+
+    Remove the k-th person.
+
+Print the remaining person.
+
+STOP
+
+---
+
+Example
+
+Number of Persons = 5
+
+1 2 3 4 5
+
+k = 2
+
+Elimination Order
+
+2 → 4 → 1 → 5
+
+Survivor
+
+3
+
+Complexity
+
+- Time Complexity: O(n × k)
+- Space Complexity: O(n)
+
+---
+
+24. Priority Queue Using a Linked List (10 Marks)
+
+Definition
+
+A Priority Queue is a special type of queue in which every element has a priority. The element with the highest priority is processed before the others.
+
+---
+
+Insertion Algorithm
+
+START
+
+Create a new node.
+
+If queue is empty
+
+    Insert as first node.
+
+Else
+
+    Find the correct position according to priority.
+
+    Insert the node.
+
+STOP
+
+---
+
+Deletion Algorithm
+
+START
+
+If queue is empty
+
+    Underflow
+
+Else
+
+    Remove the first node
+    (Highest Priority)
+
+STOP
+
+---
+
+Example
+
+Insert
+
+(A,3)
+
+(B,1)
+
+(C,2)
+
+Queue after insertion
+
+B(1) → C(2) → A(3)
+
+Delete
+
+Delete B
+
+Remaining Queue
+
+C(2) → A(3)
+
+---
+
+Complexity
+
+Operation| Time Complexity
+Insertion| O(n)
+Deletion (Highest Priority)| O(1)
+Peek| O(1)
+
+
